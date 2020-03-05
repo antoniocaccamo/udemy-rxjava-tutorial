@@ -17,6 +17,9 @@ public class ObservableUsingDefer {
     private static final Logger logger = LoggerFactory.getLogger(ObservableUsingDefer.class);
 
     public static void main(String[] args) {
+
+        logger.info("Example of {}", ObservableUsingDefer.class.getSimpleName());
+
         Observable<Shape> defer = Observable.defer(() -> {
             return Observable.fromIterable(RxUtils.shapes(7));
         });

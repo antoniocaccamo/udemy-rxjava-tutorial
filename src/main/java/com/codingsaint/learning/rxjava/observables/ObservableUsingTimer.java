@@ -16,6 +16,9 @@ public class ObservableUsingTimer {
     private static final Logger logger = LoggerFactory.getLogger(ObservableUsingTimer.class);
 
     public static void main(String[] args) throws InterruptedException {
+
+        logger.info("Example of {}", ObservableUsingTimer.class.getSimpleName());
+
        Observable.timer(200, TimeUnit.MILLISECONDS)
                .subscribe(new DemoObserver());
        RxUtils.sleep(1000);

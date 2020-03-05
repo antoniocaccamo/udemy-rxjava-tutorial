@@ -16,6 +16,9 @@ public class ObservableUsingCreate {
     private static final Logger logger = LoggerFactory.getLogger(ObservableUsingCreate.class);
 
     public static void main(String[] args) {
+
+        logger.info("Example of {}", ObservableUsingCreate.class.getSimpleName());
+
         Observable.create(
                 new ObservableOnSubscribe<Object>() {
                     @Override

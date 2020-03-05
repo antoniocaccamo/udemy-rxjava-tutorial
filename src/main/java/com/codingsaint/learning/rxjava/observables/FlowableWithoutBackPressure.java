@@ -2,7 +2,6 @@ package com.codingsaint.learning.rxjava.observables;
 
 import com.codingsaint.learning.rxjava.observers.DemoObserver;
 import com.codingsaint.learning.rxjava.utils.RxUtils;
-import io.reactivex.Flowable;
 import io.reactivex.Observable;
 import io.reactivex.schedulers.Schedulers;
 import org.slf4j.Logger;
@@ -14,9 +13,10 @@ import org.slf4j.LoggerFactory;
 public class FlowableWithoutBackPressure {
     private static final Logger logger = LoggerFactory.getLogger(FlowableWithoutBackPressure.class);
 
-
-
     public static void main(String[] args)  {
+
+        logger.info("Example of {}", FlowableWithoutBackPressure.class.getSimpleName());
+
         try {
             Observable<Integer> observable = Observable.fromIterable(RxUtils.postiveNumbers(1000000))
                     .repeat()

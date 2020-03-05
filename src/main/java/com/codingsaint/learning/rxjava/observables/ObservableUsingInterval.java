@@ -17,7 +17,12 @@ public class ObservableUsingInterval {
     private static final Logger logger = LoggerFactory.getLogger(ObservableUsingInterval.class);
 
     public static void main(String[] args) throws InterruptedException {
-       Observable.interval(200, TimeUnit.MILLISECONDS).subscribe(new DemoObserver());
+
+        logger.info("Example of {}", ObservableUsingInterval.class.getSimpleName());
+
+       Observable.interval(200, TimeUnit.MILLISECONDS)
+               .subscribe(new DemoObserver())
+       ;
 
        RxUtils.sleep(10000);
     }

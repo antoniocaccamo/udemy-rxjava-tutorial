@@ -19,6 +19,9 @@ public class FlowableWithBackPressure {
     private static final int BUFFER_SIZE = 5;
 
     public static void main(String[] args) {
+
+        logger.info("Example of {}", FlowableWithBackPressure.class.getSimpleName());
+
         Flowable<Integer> flowable = Flowable.fromIterable(RxUtils.postiveNumbers(100000))
                 .repeat()
                 .observeOn(Schedulers.newThread(), false, BUFFER_SIZE)

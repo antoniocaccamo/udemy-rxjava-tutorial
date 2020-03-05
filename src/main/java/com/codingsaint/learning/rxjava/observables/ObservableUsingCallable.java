@@ -14,6 +14,9 @@ public class ObservableUsingCallable {
     private static final Logger logger = LoggerFactory.getLogger(ObservableUsingCallable.class);
 
     public static void main(String[] args) {
+
+        logger.info("Example of {}", ObservableUsingCallable.class.getSimpleName());
+
         Observable.fromCallable(() ->{
 
             RxUtils.sleep(3000);

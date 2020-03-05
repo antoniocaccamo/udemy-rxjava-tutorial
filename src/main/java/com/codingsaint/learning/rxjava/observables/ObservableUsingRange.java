@@ -15,6 +15,9 @@ public class ObservableUsingRange {
     private static final Logger logger = LoggerFactory.getLogger(ObservableUsingRange.class);
 
     public static void main(String[] args) {
+
+        logger.info("Example of {}", ObservableUsingRange.class.getSimpleName());
+
         Observable.range(4, 10)
                 .subscribe(new DemoObserver());
     }
